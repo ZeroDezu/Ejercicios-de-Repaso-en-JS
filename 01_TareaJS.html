@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Uso de pront, confirm y do while en JavaScript</title>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<li><a href="index.html">Menu</a></li>
+		<li><a href="#">Tarea 01</a></li>
+		<li><a href="02_TareaJS.html">Tarea 02</a></li>
+		<li><a href="03_TareaJS.html">Tarea 03</a></li>	
+	</ul>
+	<h2>La competencia del alumno es:</h2>
+	<script type="text/javascript">
+		//DECLARAMOS UNA VARIABLE DONDE VAMOS A CONECTAR UNA FRASE
+		var calificacion ="";
+		//BUCLE DO WHILE PARA INTRODUCIR VARIAS CADENAS
+		do{
+			//PEDOMOS PALABRAS POR TECLADO
+			var cadena = prompt("Introdude tu calificacion");
+			//SI LA PALABRA califiacaion ESTA VACIA
+			if(calificacion == ""){
+				//CONECTAMOS SINUSAR ASTERICOS
+				calificacion = calificacion + cadena;
+			}
+			//SI NO
+			else{
+				//CONECTAMOS CON GUION
+				calificacion = calificacion + "*" + cadena;
+			}
+			//MIENTRAS SE PULSE ACEPTAR EN EL MEMSAJE EMERGENTE CONFIRM
+		}while(confirm("Desea seguir escribiendo?"));
+		//SI SE PULSA CANCELAR IMPRIMIMOS EL mensaje
+
+		//Nota cambie la palabra mensaje por calificacion
+
+		//Creo una variable para guardar el resultado de cual es su compenecia
+		//En esta parte evalua las competenci del alumno si es (AU)
+		if(calificacion <= 10 && calificacion >= 9.5){
+			var competencia = "Autónomo (AU)";
+		}
+		//En esta parte evalua las competenci del alumno si es (DE)
+		else if(calificacion <= 9.4 && calificacion >= 8.5){
+			var competencia = "Destacado (DE)";
+		}
+		//En esta parte evalua las competenci del alumno si es (SA)
+		else if(calificacion <= 8.4 && calificacion >= 7.5){
+			var competencia = "Satisfactorio (SA)";
+		}
+		//En esta parte evalua las competenci del alumno si es (NA)
+		else{
+			var competencia = "No acreditado (NA)";
+		}
+		//Imprimo la competencia
+		document.write(competencia);
+	</script>
+
+</body>
+</html>

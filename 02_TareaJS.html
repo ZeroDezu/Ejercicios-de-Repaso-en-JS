@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function cambiarTextor(){
+			//esta parte es la que ahce que el texto cambio por mi nombre
+			document.getElementById("titulo").innerHTML="José Dolores Valdez Garnica";
+		}
+	</script>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<li><a href="index.html">Menu</a></li>
+		<li><a href="01_TareaJS.html">Tarea 01</a></li>
+		<li><a href="#">Tarea 02</a></li>
+		<li><a href="03_TareaJS.html">Tarea 03</a></li>	
+	</ul>
+	<!-- le puse un id a H1 -->
+	<h1 id="titulo">Tarea 02 con JavaScript</h1>
+	<!-- le puse el onclick y mande llamar el metodo cambiarTexto para que al momento de darle clic cambiara el texto por mi nombre Informacion sacada de https://www.w3schools.com/Js/js_input_examples.asp-->
+	<input onclick="cambiarTextor()" type="button" value="Clicme!">
+
+</body>
+</html>
