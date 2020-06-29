@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>04_TareaJS</title>
+
+	<script >
+		function sum(){
+			var suma = 0;
+				do{
+					var numero = parseInt(prompt("Introdude un numero"));
+
+					if(numero > 0){
+						suma = suma + numero;
+					}else{
+						numero = 1;
+					}
+				}while(numero != 1);
+
+				document.getElementById("res").innerHTML=suma;
+		};
+	</script>
+</head>
+<body>
+
+	<h1>Menu</h1>
+	<ul>
+		<li><a href="index.html">Menu</a></li>
+		<li><a href="01_TareaJS.html">Tarea 01</a></li>
+		<li><a href="02_TareaJS.html">Tarea 02</a></li>
+		<li><a href="03_TareaJS.html">Tarea 03</a></li>
+		<li><a href="#">Tarea 04</a></li>
+		<li><a href="05_TareaJS.html">Tarea 05</a></li>	
+	</ul>
+		<h1>Suma</h1>
+		<h2 id="res"></h2>
+		<script >
+		
+			var suma = 0;
+				do{
+					var numero = parseInt(prompt("Introdude un numero entero positivo"));
+
+					if(numero > 0){
+						suma = suma + numero;
+					}else{
+						numero = 1;
+					}
+				}while(numero != 1);
+
+				document.getElementById("res").innerHTML="el resutado es: "+suma;
+		
+	    </script>
+
+</body>
+</html>
