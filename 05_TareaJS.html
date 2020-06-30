@@ -3,11 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>05_TareaJS</title>
-	<script src="js/boton01.js"></script>
+	<!--toda esta parte es para llamar a los archivos script-->
+	<!--NOTA: hice 3 archivos diferentes para no revolverme pero los pude haber puesto en uno solo XD-->
+	<script src="js/boton01.js"></script> 
 	<script src="js/boton02.js"></script>
 	<script src="js/boton03.js"></script>
 </head>
 <body>
+	<!--Zona del menu-->
 	<ul>
 		<li><a href="index.html">Menu</a></li>
 		<li><a href="01_TareaJS.html">Tarea 01</a></li>
@@ -17,23 +20,29 @@
 		<li><a href="#">Tarea 05</a></li>	
 	</ul>
 
-
-	<h1>Par/Impar</h1>
-	<input type="button" value="Calcular!" onclick="bott01();">
-	<p>----------------------------------------------------------------------</p>
+	<!--Boton numero 1-->
+	<h1>Par/Impar</h1> 
+	<input type="button" value="Calcular!" onclick="bott01();"> <!--esta parte es para mandar a llamar al metodo que esta en otro archivo.-->
+	<hr>
+	
+	<!--Boton numero 2-->
 	<h1>Numeros primos entre 1 y 50</h1>
-	<input type="button" value="Calcular!" onclick="bott02();">
-	<p>----------------------------------------------------------------------</p>
+	<input type="button" value="Calcular!" onclick="bott02();"> <!--esta parte es para mandar a llamar al metodo que esta en otro archivo.-->
+	<hr>
+	
+	<!--Boton numero 3-->
 	<h1>Numero mayor de entre tres</h1>
 	<h2>Ingresa tres numeros para evaluar</h2>
-	<input type="text" value="0" id="n1">
-	<input type="text" value="0" id="n2">
-	<input type="text" value="0" id="n3">
-	<input type="button" value="Calcular!" onclick="bott03();">
-	<p>----------------------------------------------------------------------</p>
+	<input type="text" value="0" id="n1"> <!--Sona de input para pedir un numero-->
+	<input type="text" value="0" id="n2"> <!--Sona de input para pedir un numero-->
+	<input type="text" value="0" id="n3"> <!--Sona de input para pedir un numero-->
+	<input type="button" value="Calcular!" onclick="bott03();"> <!--esta parte es para mandar a llamar al metodo que esta en otro archivo.-->
+	<hr>
+	
+	<!--esta sona la agregue para poner el resultado o informar donde se encuentra este-->
 	<fieldset>
 		<legend>Resultado</legend>
-		<h2 id="res"></h2>
+		<h2 id="res"></h2>  <!--Zona donde remplazo para colocar el resultado o el mensaje-->
 	</fieldset>
 </body>
 </html>
