@@ -3,26 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>04_TareaJS</title>
-
-	<script >
-		function sum(){
-			var suma = 0;
-				do{
-					var numero = parseInt(prompt("Introdude un numero"));
-
-					if(numero > 0){
-						suma = suma + numero;
-					}else{
-						numero = 1;
-					}
-				}while(numero != 1);
-
-				document.getElementById("res").innerHTML=suma;
-		};
-	</script>
 </head>
 <body>
-
+	<!--Zona del menu-->
 	<h1>Menu</h1>
 	<ul>
 		<li><a href="index.html">Menu</a></li>
@@ -32,22 +15,25 @@
 		<li><a href="#">Tarea 04</a></li>
 		<li><a href="05_TareaJS.html">Tarea 05</a></li>	
 	</ul>
-		<h1>Suma</h1>
+		<h1>Suma</h1> 
+		<!--En esta parte pongo el resultado-->
 		<h2 id="res"></h2>
 		<script >
-		
+			//creo una variable
 			var suma = 0;
-				do{
-					var numero = parseInt(prompt("Introdude un numero entero positivo"));
+				//en esta parte pongo un do-while para que el proceso se repita asta que se cumpla la coondicion
+				do{	
+					var numero = parseInt(prompt("Introdude un numero entero positivo")); //variable para almacenar un valor
 
-					if(numero > 0){
-						suma = suma + numero;
+					if(numero > 0){  //en esta parte se evalua si el numero es positivo
+						suma = suma + numero; //a qui se van sumando y guardando
 					}else{
 						numero = 1;
+						//en esta parte si la condicion del if no se cumple el numero ingresado automaticamnte se vuelve 1 para salir de do-while
 					}
-				}while(numero != 1);
+				}while(numero != 1);//esta parte es para salir del do-while
 
-				document.getElementById("res").innerHTML="el resutado es: "+suma;
+				document.getElementById("res").innerHTML="el resutado es: "+suma;//remplaza y muestra el resultado en el html
 		
 	    </script>
 
