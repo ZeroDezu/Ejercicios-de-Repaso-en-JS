@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Targeta</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@1&family=Mrs+Saint+Delafield&family=Niconne&family=Oleo+Script&family=Parisienne&display=swap" rel="stylesheet">
+
+	<script>
+		function generarTarjeta(){
+			//mostrar targeta
+			document.getElementById("tarjeta").style.display="block";
+			//targeta selecionada
+			var tarf;
+			if(document.getElementById("Tm01").checked){
+				tarf = document.getElementById("Tm01").value;
+				document.getElementById("tituloTar").style.fontFamily = 'Mrs Saint Delafield';
+				document.getElementById("tituloTar").style.fontSize = '3em';
+				document.getElementById("subtituloTar").style.fontFamily = 'Mrs Saint Delafield';
+				document.getElementById("subtituloTar").style.fontSize = '2em';
+				document.getElementById("msjTar").style.fontFamily = 'Mrs Saint Delafield';
+				document.getElementById("msjTar").style.fontSize = '1em';
+				document.getElementById("despedida").style.fontFamily = 'Mrs Saint Delafield';
+				document.getElementById("despedida").style.fontSize = '2em';
+				document.getElementById("remitente").style.fontFamily = 'Mrs Saint Delafield';
+				document.getElementById("remitente").style.fontSize = '2em';
+			}else if(document.getElementById("Tm02").checked){
+				tarf = document.getElementById("Tm02").value;
+				document.getElementById("tituloTar").style.fontFamily = 'Fondamento';
+				document.getElementById("tituloTar").style.fontSize = '3em';
+				document.getElementById("subtituloTar").style.fontFamily = 'Fondamento';
+				document.getElementById("subtituloTar").style.fontSize = '2em';
+				document.getElementById("msjTar").style.fontFamily = 'Fondamento';
+				document.getElementById("msjTar").style.fontSize = '1em';
+				document.getElementById("despedida").style.fontFamily = 'Fondamento';
+				document.getElementById("despedida").style.fontSize = '2em';
+				document.getElementById("remitente").style.fontFamily = 'Fondamento';
+				document.getElementById("remitente").style.fontSize = '2em';
+			}else{
+				tarf = document.getElementById("Tm03").value;
+				document.getElementById("tituloTar").style.fontFamily = 'Niconne';
+				document.getElementById("tituloTar").style.fontSize = '3em';
+				document.getElementById("subtituloTar").style.fontFamily = 'Niconne';
+				document.getElementById("subtituloTar").style.fontSize = '2em';
+				document.getElementById("msjTar").style.fontFamily = 'Niconne';
+				document.getElementById("msjTar").style.fontSize = '1em';
+				document.getElementById("despedida").style.fontFamily = 'Niconne';
+				document.getElementById("despedida").style.fontSize = '2em';
+				document.getElementById("remitente").style.fontFamily = 'Niconne';
+				document.getElementById("remitente").style.fontSize = '2em';
+			}
+
+			//agregamos el fondo a la tarjeta
+			document.getElementById("tarjeta").style.background = "url('"+tarf+"')";
+			document.getElementById("tarjeta").style.backgroundrepead = "no-repeat";
+			document.getElementById("tarjeta").style.backgroundSize = "cover";
+			document.getElementById("tarjeta").style.minHeight = "910px";
+
+			//Mostrar titulo
+			var t = document.getElementById("tituloTxt").value;
+			document.getElementById("tituloTar").innerHTML=t;
+			document.getElementById("tituloTar").style.marginTop="100px";
+
+			//mostrar Subtitulo
+			var st = document.getElementById("subtituloTxt").value;
+			document.getElementById("subtituloTar").innerHTML=st;
+			document.getElementById("subtituloTar").style.marginTop="5px";
+
+			//Mostrar imagen
+			var ima;
+			var tipo;
+			if(document.getElementById("img01").checked){
+				ima = document.getElementById("img01").value;
+				document.getElementById("imgTar").style.background = "url('"+ima+"')";
+				document.getElementById("imgTar").style.backgroundrepead = "no-repeat";
+				document.getElementById("imgTar").style.backgroundSize = "cover";
+				document.getElementById("imgTar").style.minHeight = "180px";
+				document.getElementById("imgTar").style.marginLeft = "300px";
+			}else if(document.getElementById("img02").checked){
+				ima = document.getElementById("img02").value;
+				document.getElementById("imgTar").style.background = "url('"+ima+"')";
+				document.getElementById("imgTar").style.backgroundrepead = "no-repeat";
+				document.getElementById("imgTar").style.backgroundSize = "cover";
+				document.getElementById("imgTar").style.minHeight = "180px";
+				document.getElementById("imgTar").style.marginLeft = "300px";
+			}else{
+				ima = document.getElementById("img03").value;
+				document.getElementById("imgTar").style.background = "url('"+ima+"')";
+				document.getElementById("imgTar").style.backgroundrepead = "no-repeat";
+				document.getElementById("imgTar").style.backgroundSize = "cover";
+				document.getElementById("imgTar").style.minHeight = "180px";
+				document.getElementById("imgTar").style.marginLeft = "300px";
+				document.getElementById("tituloTar").style.marginTop="180px";
+			}
+
+			var m = document.getElementById("mensajeTxt").value;
+			document.getElementById("msjTar").innerHTML=m;
+			document.getElementById("msjTar").style.marginTop="5px";
+
+			var d = document.getElementById("receptorTxt").value;
+			document.getElementById("despedida").innerHTML=d;
+			document.getElementById("despedida").style.marginTop="5px";
+
+			var a = document.getElementById("emisorTxt").value;
+			document.getElementById("remitente").innerHTML=a;
+			document.getElementById("remitente").style.marginTop="5px";
+
+			//color de texto
+			var c = document.getElementById("colorTxt").value;
+			document.getElementById("tituloTar").style.color = c;
+			document.getElementById("subtituloTar").style.color=c;
+			document.getElementById("msjTar").style.color=c;
+			document.getElementById("despedida").style.color=c;
+			document.getElementById("remitente").style.color=c;
+
+			document.getElementById("conteido").style.display = "none";
+		}
+
+		function regresar(){
+			document.getElementById("conteido").style.display="block";
+			document.getElementById("tarjeta").style.display = "none";
+		}
+	</script>
+
+</head>
+<body>
+	<article class="container-fluid" id="conteido">
+		<section class="container-fluid" id="titulo">
+			<section class="row">
+				<!--Zona del titulo-->
+				<section class="col-md-12 text-center">
+					<h1>Crea tu Tarjetas de Felicitación</h1>
+					<hr>
+				</section>
+			</section>
+		</section>
+		<!--Zona del eleccion de tema-->
+		<section class="container-fluid" id="temas">
+			<section class="row">
+				<section class="col-md-12 text-center">
+					<h2>Elige uno de los tres tamas disponibles</h2> <br>
+					<input type="radio" name="tema" id="Tm01" checked value="img/SV.jpg">
+					<label> San Valentin</label>
+					<input type="radio" name="tema" id="Tm02" value="img/Cumpleaños.jpg">
+					<label> Cumpleaños</label>
+					<input type="radio" name="tema" id="Tm03" value="img/Motivacion.jpg">
+					<label> Motivación</label>
+					<hr>
+				</section>
+			</section>
+		</section>
+		<!--Zona del eleccion de imagen-->
+		<section class="container-fluid" id="imagen">
+			<section class="row text-center">
+				<section class="col-md-4" id="izqImg">
+					<img src="img/SVimg.png" height="150" width="150"><br>
+					<input type="radio" name="img" id="img01" value="img/SVimg.png" checked>
+					<label> San Valentin</label>
+				</section>
+				<section class="col-md-4" id="cenImg">
+					<img src="img/CumpleañosIMG.jpg" height="150" width="150"><br>
+					<input type="radio" name="img" id="img02" value="img/CumpleañosIMG.jpg">
+					<label> Cumpleaños</label>
+				</section>
+				<section class="col-md-4" id="derImg">
+					<img src="img/MotivacionIMG.png" height="150" width="150"><br>
+					<input type="radio" name="img" id="img03" value="img/MotivacionIMG.png">
+					<label> Motivación</label>
+				</section>
+			</section><hr>
+		</section>
+		<!--Zona del formulario-->
+		<section class="container-fluid" id="formulario">
+			<section class="row">
+				<section class="col-md-4" id="ezqForm">
+					<label>Ingresa tu nombre: </label>
+					<input type="text" id="emisorTxt" name="formTxt"><br><br>
+					<label>Ingresa un titulo: </label>
+					<input type="text" id="tituloTxt" name="formTxt"><br><br>
+					<label>Ingresa un subtitulo: </label>
+					<input type="text" id="subtituloTxt" name="formTxt"><br><br>
+					<label>Persona a felicitar: </label>
+					<input type="text" id="receptorTxt" name="formTxt"><br><br>
+				</section>
+				<section class="col-md-4 text-center" id="derForm">
+					<label id="msj">Mensaje!!</label><br>
+					<textarea id="mensajeTxt" cols="60" rows="7"></textarea>
+				</section>
+				<!--Zona de eleccion de color de texto y generar tarjeta-->
+				<section class="col-md-4 text-center" id="color">
+					<h3>Elige un color de texto</h3>
+					<label for="colorTxt">Color: </label>
+					<input type="color" id="colorTxt">
+					<hr>
+					<h3>Generar tarjeta!!</h3>
+					<input type="button" name="name" value="generar" onclick="generarTarjeta();">
+					<li><a href="index.html">Menu</a></li>
+				</section>
+			</section>
+		</section>
+	</article>
+	<!--Zona de tarjeta-->
+	<section class="container-fluid" id="tarjeta">
+		<!--Zona de titulo-->
+		<section class="row text-center">
+			<section class="col-md-4"></section>
+			<section class="col-md-4">
+				<h3  id="tituloTar"></h3>
+			</section>
+			<section class="col-md-4"></section>
+		</section>
+		<!--Zona de subtitulo-->
+		<section class="row text-center">
+			<section class="col-md-4"></section>
+			<section class="col-md-4">
+				<h4 id="subtituloTar"></h4>
+			</section>
+			<section class="col-md-4"></section>
+		</section>
+		<!--Zona de imagen-->
+		<section class="col-md-3" id="imgTar"></section>
+		<section class="row text-center">
+			<section class="col-md-3"></section>
+			<section class="col-md-6">
+				<p id="msjTar"></p>
+			</section>
+			<section class="col-md-2"></section>
+		</section>
+		<section class="row text-center">
+			<section class="col-md-3"></section>
+			<section class="col-md-6">
+				<h4>Adios</h4>
+				<h4 id="despedida"></h4>
+			</section>
+			<section class="col-md-2"></section>
+		</section>
+		<section class="row">
+			<section class="col-md-7"></section>
+			<section class="col-md-5">
+				<h5>Atentamente</h5>
+				<h5 id="remitente"></h5>
+			</section>
+		</section>
+		<input type="button" name="name" value="regresar" onclick="regresar();">
+	</section>
+</body>
+</html>
