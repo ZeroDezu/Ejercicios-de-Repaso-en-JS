@@ -1,0 +1,33 @@
+/*
+font-family: 'Fondamento', cursive;
+font-family: 'Mrs Saint Delafield', cursive;
+font-family: 'Niconne', cursive;
+font-family: 'Oleo Script', cursive;
+font-family: 'Parisienne', cursive;
+
+Creadores de las tarjetas de fondo
+<a href='https://www.freepik.es/fotos-vectores-gratis/patron'>Vector de Patrón creado por rawpixel.com - www.freepik.es</a>
+<a href='https://www.freepik.es/fotos-vectores-gratis/fondo'>Vector de Fondo creado por freepik - www.freepik.es</a>
+<a href='https://www.freepik.es/fotos-vectores-gratis/fondo'>Vector de Fondo creado por vextok - www.freepik.es</a>
+*/
+*{margin:0; padding:0;}
+
+#tarjeta{
+    width: 70%;
+    height: auto;
+    display: none;
+    margin: 80px auto;
+    border: 5px solid #ddd;
+    padding: 20px 5%;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+}
+
+#imgTar{
+    border-radius: 50px;
+}
+
+#Tm01{font-family: 'Oleo Script', cursive;}
+#Tm02{font-family: 'Fondamento', cursive;}
+#Tm03{font-family: 'Niconne', cursive;}
