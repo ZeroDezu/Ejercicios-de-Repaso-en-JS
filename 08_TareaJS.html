@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Tarea 8</title>
+	<link rel="stylesheet" href="">
+	<script>
+		var elado =10;
+		//creo una funcion para cada tipo de topping muestro el coste de este
+		function sint(){
+			document.getElementById("coste").innerHTML = "Elado sin Topping" +" el coste es: $"+ 20;
+		}
+		function or(){
+			document.getElementById("coste").innerHTML = "Topping Oreo"+" el coste es: $"+ 30;
+		}
+		function kit(){
+			document.getElementById("coste").innerHTML = "Topping KitKat"+" el coste es: $"+ 35;
+		}
+		function caj(){
+			document.getElementById("coste").innerHTML = "Topping Cajeta"+" el coste es: $"+ 30;
+		}
+		function cnuez(){
+			document.getElementById("coste").innerHTML = "Topping ChocoNuez"+" el coste es: $"+ 40;
+		}
+	</script>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<!--Menu-->
+		<li><a href="index.html">Menu</a></li>
+	</ul>
+	
+	<h1>Costo de un elado dependiendo du topping</h1>
+	<h3>El coste del elado es de $20.00</h3>
+	<!--Presiona el tipo de topping quiera para su elado y el coste extra que va a tener-->
+	<table border="5">
+		<tr>
+			<td>Descripción</td>
+			<td>Precio</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="SinTopping" onclick="sint();"></td>
+			<td>$20.00</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Oreo" onclick="or();"></td>
+			<td>$10.00+</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="KitKat" onclick="kit();"></td>
+			<td>$15.00+</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Cajeta" onclick="caj();"></td>
+			<td>$10.00+</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="ChocoNuez" onclick="cnuez();"></td>
+			<td>$20.00+</td>
+		</tr>
+	</table>
+	<h3>El coste de su helado es</h3>
+	<h4 id="coste"></h4> <!--remplasa el texto para poder imprimir el resltado-->
+</body>
+</html>

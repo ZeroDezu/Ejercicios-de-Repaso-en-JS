@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>tarea 10</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script>
+		//funcion que repite el ciclo pero no el del principio, solo cuando le das al boton Regresar!
+		function viajar(){
+		//oculta las secciones que no se ven dependiendo del mes
+			document.getElementById("meses01").style.display="none";
+			document.getElementById("meses02").style.display="none";
+			//es lo mismo que lo del principio
+			do{
+				if(confirm("Desea viajar")){
+					var mes = prompt("Ingresa el mes en que planea viajar");
+
+					if(mes == "julio"||mes == "agosto"||mes == "septiembre"||mes == "octubre"||mes == "noviembre"||mes == "diciembre"){
+						document.getElementById("meses01").style.display="block";
+					}else if(mes == "enero"||mes == "febrero"||mes == "marzo"||mes == "abril"||mes == "mayo"||mes == "junio"){
+						document.getElementById("meses02").style.display="block";
+					}else{
+						alert("ese mes no existe");
+					}
+				}
+			}while(confirm("Desea continuar"));
+			}
+	</script>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<!--Menu: borre los demas y solo deje la perte del menu-->
+		<li><a href="index.html">Menu</a></li>
+	</ul>
+	<!--Creé dos secciones donde contienen las tablas dependiendo el mes los precios cambian-->
+		<section id="meses01">
+			<table border="5">
+				<tr>
+					<td>Destino</td>
+					<td>Precio</td>
+				</tr>
+				<tr>
+					<td>Cancún</td>
+					<td>$7,000.00</td>
+				</tr>
+				<tr>
+					<td>Disneylandia</td>
+					<td>$12,000.00</td>
+				</tr>
+				<tr>
+					<td>Ixtapa</td>
+					<td>$5,000.00</td>
+				</tr>
+				<tr>
+					<td>Las Vegas</td>
+					<td>$12,000.00</td>
+				</tr>
+			</table><hr>
+			<input type="button" value="Regresar!" onclick="viajar();"> <!--boton para regresar al bucle de perguntar si quiere biajar y el mes-->
+		</section>
+
+		<section id="meses02">
+			<table border="5">
+				<tr>
+					<td>Destino</td>
+					<td>Precio</td>
+				</tr>
+				<tr>
+					<td>Cancún</td>
+					<td>$10,000.00</td>
+				</tr>
+				<tr>
+					<td>Disneylandia</td>
+					<td>$20,000.00</td>
+				</tr>
+				<tr>
+					<td>Ixtapa </td>
+					<td>$8,000.00</td>
+				</tr>
+				<tr>
+					<td>Las Vegas</td>
+					<td>$18,000.00</td>
+				</tr>
+			</table><hr>
+			<input type="button" value="Regresar!" onclick="viajar();"> <!--boton para regresar al bucle de perguntar si quiere biajar y el mes-->
+		</section>
+
+		<script>
+			do{//esta partes es para validar si quieres vaijar
+				if(confirm("Desea viajar")){
+					var mes = prompt("Ingresa el mes en que planea viajar");//esta parte ingresas el mes en deceas viajar
+					//en esta parte evalua el mes y muestra los precios dependiendo del es en que se desea biajar
+					if(mes == "julio"||mes == "agosto"||mes == "septiembre"||mes == "octubre"||mes == "noviembre"||mes == "diciembre"){
+						document.getElementById("meses01").style.display="block";//muestra las secciones que no se ven dependiendo del mes
+					}else if(mes == "enero"||mes == "febrero"||mes == "marzo"||mes == "abril"||mes == "mayo"||mes == "junio"){
+						document.getElementById("meses02").style.display="block";//muestra las secciones que no se ven dependiendo del mes
+					}else{
+						alert("ese mes no existe");//esta pares es por si ingresan el mes mal o no lo ingresas
+					}
+				}
+			}while(confirm("Desea continuar"));//validad si decea viajar de nuevo o desea continuar sirve para que lo repita indeterminadamente
+		</script>
+</body>
+</html>

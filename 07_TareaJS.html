@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Tarea 7</title>
+	<link rel="stylesheet" href="">
+	<script>
+		//creo una funcion
+		function cal(){
+			//variables donde guardo el valor ingresado
+			var ctg = parseInt(document.getElementById("categoria").value);
+			var sld = parseInt(document.getElementById("sueldo").value);
+			switch(ctg){//en esta parte evalueo la categoria y dor porsentage
+				case 1: document.getElementById("aumento").innerHTML= sld+((sld*15)/100); break;
+				case 2: document.getElementById("aumento").innerHTML= sld+((sld*10)/100); break;
+				case 3: document.getElementById("aumento").innerHTML= sld+((sld*8)/100); break;
+				case 4: document.getElementById("aumento").innerHTML= sld+((sld*7)/100); break;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<!--Menu: borre los demas y solo deje la perte del menu-->
+		<li><a href="index.html">Menu</a></li>
+	</ul>
+	
+	<h1>Calcular el incremento de tu sueldo dependiendo de su sueldo y categoria</h1>
+	<!--tabla donde pueden la categoria y el porsentaje de incremento-->
+	<table border="1">
+		<tr>
+			<td>Categoria</td>
+			<td>% de aumento</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>15%</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>10%</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>8%</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>7%</td>
+		</tr>
+	</table>
+	<!--en esta parte ingresan sus datos categoria y sueldo-->
+	<h3>Ingrese sus datos</h3>
+	<p>Categoria</p>
+	<input type="text" name="nom" id="categoria">
+	<p>Sueldo</p>
+	<input type="text" name="suel" id="sueldo">
+	<input type="button" value="Calcular!" onclick="cal();">
+	<h3>Su sueldo con el aumento es</h3>
+	<p id="aumento"></p>
+</body>
+</html>

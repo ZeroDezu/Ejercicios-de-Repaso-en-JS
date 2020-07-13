@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Tarea 6</title>
+	<link rel="stylesheet" href="">
+	<script>
+		//creo una funcion
+		function par(){
+			//creo variables
+			var suma = 0;
+			var contador = 0;
+			var mostrar = "";
+			//ciclo para repetir la condicion
+			for(var i = 1;i<=100;i++){
+				if(i % 2 == 0) { //condicion a evaluar si es par
+					suma = suma+i; //suma los numero spres
+					contador++; //lleba la cuanta de los numeros pares
+					mostrar = mostrar + "<br>" + i; //esta parte sirbe para poder imprimir los numeros pares
+				}
+			}
+			//cambia y muestra los resultados
+			document.getElementById("sum").innerHTML= suma;
+			document.getElementById("pars").innerHTML= contador;
+			document.getElementById("np").innerHTML= mostrar;
+		}
+	</script>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<!--Menu-->
+		<li><a href="index.html">Menu</a></li>
+		<li><a href="01_TareaJS.html">Tarea 01</a></li>
+		<li><a href="#">Tarea 02</a></li>
+		<li><a href="03_TareaJS.html">Tarea 03</a></li>
+		<li><a href="04_TareaJS.html">Tarea 04</a></li>
+		<li><a href="05_TareaJS.html">Tarea 05</a></li>	
+		<li><a href="#">Tarea 06</a></li>
+		<li><a href="Tarjeta.html">Tarjetas</a></li>
+	</ul>
+	
+	<!--dondes s muestra los resultados-->
+	<h1>Suma</h1>
+	<p id="sum"></p><hr>
+	<h1>Cuantos numeros pares hay enre 1 y 100?</h1>
+	<p id="pars"></p><hr>
+	<h1>Numero pares</h1>
+	<p id="np"></p>
+	<input onclick="par()" type="button" value="Clicme!">
+
+</body>
+</html>

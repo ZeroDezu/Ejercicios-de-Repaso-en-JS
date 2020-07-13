@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Tarea 9</title>
+	<link rel="stylesheet" href="">
+	<script>
+		//creo una funcion
+		function saber(){
+			//variables donde guardo el valor ingresado
+			var generacion ="";
+			do{
+			//PEDOMOS PALABRAS POR TECLADO
+			var año = parseInt(prompt("Introdude tu año de nacimiento"));
+			//verifica si el año esta entre alguno de los rangos y muestra la generacion si se cumple la condicion
+			if(año >= 1994 && año <= 2010){
+				alert("ested nacio en: " +año+" y su geneacion es: Generación Z");
+			}else if(año >= 1981 && año <= 1993){
+				alert("ested nacio en: " +año+" y su geneacion es: Generación Y");
+			}else if(año>=1969 && año<=1980){
+				alert("ested nacio en: " +año+" y su geneacion es: Generación X");
+			}else if(año>=1949 && año<=1968){
+				alert("ested nacio en: " +año+" y su geneacion es: Generación Baby Boom");
+			}else{//un mensaje si agrega un numero fuera de los rangos
+				alert("Lo sentimos pero no contamos con el nombre de la generacón del año: " +año);
+			}
+			//MIENTRAS SE PULSE ACEPTAR EN EL MEMSAJE EMERGENTE CONFIRM
+		}while(confirm("Desea ingresar otro año?"));
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul>
+		<!--Menu: borre los demas y solo deje la perte del menu-->
+		<li><a href="index.html">Menu</a></li>
+	</ul>
+	<!--otan para intentar saber su generacion-->
+	<h1>Pagina para saber a que generacion por tu año de nacimento</h1>
+	<input type="button" value="Intentar!" onclick="saber();">
+	
+</body>
+</html>
