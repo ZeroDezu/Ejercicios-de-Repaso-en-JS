@@ -13,7 +13,7 @@
 			//es lo mismo que lo del principio
 			do{
 				if(confirm("Desea viajar")){
-					var mes = prompt("Ingresa el mes en que planea viajar");
+					var mes = prompt("Ingresa el mes en que planea viajar, todo en minusculas");
 
 					if(mes == "julio"||mes == "agosto"||mes == "septiembre"||mes == "octubre"||mes == "noviembre"||mes == "diciembre"){
 						document.getElementById("meses01").style.display="block";
@@ -89,7 +89,7 @@
 		<script>
 			do{//esta partes es para validar si quieres vaijar
 				if(confirm("Desea viajar")){
-					var mes = prompt("Ingresa el mes en que planea viajar");//esta parte ingresas el mes en deceas viajar
+					var mes = prompt("Ingresa el mes en que planea viajar, todo en minusculas");//esta parte ingresas el mes en deceas viajar
 					//en esta parte evalua el mes y muestra los precios dependiendo del es en que se desea biajar
 					if(mes == "julio"||mes == "agosto"||mes == "septiembre"||mes == "octubre"||mes == "noviembre"||mes == "diciembre"){
 						document.getElementById("meses01").style.display="block";//muestra las secciones que no se ven dependiendo del mes
