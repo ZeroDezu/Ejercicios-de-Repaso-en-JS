@@ -31,3 +31,7 @@ Creadores de las tarjetas de fondo
 #Tm01{font-family: 'Oleo Script', cursive;}
 #Tm02{font-family: 'Fondamento', cursive;}
 #Tm03{font-family: 'Niconne', cursive;}
+
+#meses01, #meses02, #principal{
+    display: none;
+}
